@@ -11,8 +11,8 @@ class StatisticsServiceTest {
 
     @Test
     void shouldCalculateSum() {
-        int sum = (int) service.calculateSum(purchases);
-        int actual = (int) service.calculateSum(purchases);
+        int sum = service.calculateSum(purchases);
+        int actual = service.calculateSum(purchases);
         int expected = 180;
         System.out.println(sum);
         assertEquals(expected, actual);
@@ -20,16 +20,16 @@ class StatisticsServiceTest {
 
     @Test
     void shouldCalculateAverageSum() {
-        double averageSum = service.calculateAverageSum(purchases);
-        int actual = (int) service.calculateAverageSum(purchases);
-        double expected = 15.0;
+        int averageSum = service.calculateAverageSum(purchases);
+        int actual = service.calculateAverageSum(purchases);
+        int expected = 15;
         System.out.println(averageSum);
         assertEquals(expected, actual);
     }
 
     @Test
     void shouldFindMonthWithMaxPurchase() {
-        int findMaxMonth = (int) service.findMaxMonth(purchases);
+        int findMaxMonth = service.findMaxMonth(purchases);
         int actual = service.findMaxMonth(purchases);
         int expected = 8;
         System.out.println(findMaxMonth);
@@ -38,7 +38,7 @@ class StatisticsServiceTest {
 
     @Test
     void shouldFindMonthWithMinPurchase() {
-        int findMinMonth = (int) service.findMinMonth(purchases);
+        int findMinMonth = service.findMinMonth(purchases);
         int actual = service.findMinMonth(purchases);
         int expected = 9;
         System.out.println(findMinMonth);
@@ -47,7 +47,7 @@ class StatisticsServiceTest {
 
     @Test
     void shouldFindMonthWithLowerThenAverageMonthPurchse() {
-        int minAvgMonthPurchse = (int) service.minAvgMonthPurchse(purchases);
+        int minAvgMonthPurchse = service.minAvgMonthPurchse(purchases);
         int actual = service.minAvgMonthPurchse(purchases);
         int expected = 5;
         System.out.println(minAvgMonthPurchse);
@@ -56,7 +56,7 @@ class StatisticsServiceTest {
 
     @Test
     void shouldFindMonthWithHigherThenAverageMonthPurchase() {
-        int maxAvgMonthPurchase = (int) service.maxAvgMonthPurchase(purchases);
+        int maxAvgMonthPurchase = service.maxAvgMonthPurchase(purchases);
         int actual = service.maxAvgMonthPurchase(purchases);
         int expected = 5;
         System.out.println(maxAvgMonthPurchase);

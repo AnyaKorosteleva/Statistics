@@ -3,15 +3,15 @@ package ru.netology.stats;
 
 
 public class StatisticsService {
-    public long calculateSum(int[] purchases) {
+    public int calculateSum(int[] purchases) {
         int sum = 0;
-        for (long purchase : purchases) {
+        for (int purchase : purchases) {
             sum += purchase;
         }
         return sum;
     }
 
-    public double calculateAverageSum(int[] purchases) {
+    public int calculateAverageSum(int[] purchases) {
         int sum = (int) calculateSum(purchases);
         return sum / purchases.length;
     }
